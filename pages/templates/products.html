@@ -1,0 +1,11 @@
+<!-- templates/products.html -->
+{% extends "base.html" %} {% block content %}
+<h1>Company Products Page</h1>
+<p>The current date and time is {% now "DATETIME_FORMAT" %}</p>
+<p>There are {{ product_list|length }} products.</p>
+<ul>
+  {% for item in product_list %}
+  <li>{{ item }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
